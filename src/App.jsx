@@ -1,12 +1,13 @@
-import './App.css'
+import Navbar from "./components/Navbar"
+import ItemListContainer from "./components/ItemListContainer.jsx"
 
 function App() {
 
   return (
-    <div>
-      <h1>Hola mundo
-      </h1>
-    </div>
+    <>
+      <Navbar/>
+      <ItemListContainer message="Lista de Productos"/>
+    </>
   )
 }
 
