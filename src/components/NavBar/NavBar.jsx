@@ -57,7 +57,7 @@ export const NavBar = () => {
                   <button className="nav-link px-3" href="">Whiskey</button>
                 </Link>
                 <Link to="/cart">
-                  <button className="nav-link px-3" href=""><FaCartShopping/>1</button>
+                  <button className="nav-link px-3" href=""><FaCartShopping/></button>
                 </Link>
               </div>
             </div>
