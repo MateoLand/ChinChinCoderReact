@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useCart } from "../../context/CartContext";
 import db from "../../db/db";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { toast, ToastContainer } from "react-toastify";
 
 const Checkout = () => {
   const { cart, totalPrice, clear } = useCart();
@@ -44,6 +45,11 @@ const Checkout = () => {
       const docRef = await addDoc(ordersRef, order);
       setOrderId(docRef.id);
       clear(); // Vaciar carrito
+      toast.success(`Compra realizada con éxito! ID: ${docRef.id}`, {
+        position: "top-right",
+        autoClose: 5000,
+        theme: "dark",
+      })
     } catch (error) {
       setError("Hubo un error al procesar tu compra. Intenta de nuevo.");
       console.error("Error al crear la orden:", error);

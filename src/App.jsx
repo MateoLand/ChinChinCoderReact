@@ -5,10 +5,14 @@ import { Cart } from "./components/Cart/Cart";
 import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
 import { CartProvider } from "./context/CartContext";
 import  Checkout  from "./components/Checkout/Checkout";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 function App() {
   return (
     <CartProvider>
+      <ToastContainer />
       <BrowserRouter>
         <NavBar />
         <Routes>
